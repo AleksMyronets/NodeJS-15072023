@@ -1,14 +1,16 @@
 const checkExtension = (fileName) => {
-  const EXTENSIONS = ["js", "json", "html", "css", "txt"];
+    const EXTENSIONS = ["js", "json", "html", "css", "txt"];
+    const index = fileName.lastIndexOf('.');
+    const extension = slice(index + 1);
+    // const finded = EXTENSIONS.find(() => { extension });
 
-  const fileParts = fileName.split(".");
-  if (fileParts.length > 1) {
-    const extension = fileParts[fileParts.length - 1];
-    if (EXTENSIONS.includes(extension)) {
-      return true;
+    const result = EXTENSIONS.some(el => el === extension)
+
+    const object = {
+        extention,
+        result: finded,
     }
-  }
-
-  return false;
+    return object; 
 };
 
+module.exports = checkExtension;
