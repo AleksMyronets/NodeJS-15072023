@@ -1,10 +1,8 @@
 const fs = require('fs/promises');
-
 const path = require('path');
-
 const chalk = require('chalk');
-
-const helper = require('./helprs/dataValidator')
+const helper = require('./helprs/dataValidator');
+const checkExtension = require('./helprs/checkExtentions');
 
 const creatFile = async (fileName, content) => {
     const file = {
