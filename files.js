@@ -17,8 +17,14 @@ const creatFile = async (fileName, content) => {
         return;
     }
 
-}
+    const checkName = checkExtension(fileName)
+    if (fileName, result) {
+        const test = chalk.red(`Sorry, this APP doesn't support ${checkName.extension} this extations`)
+        console.log(test);
+        return;
+    }
 
-module.exports = {
-    creatFile,
+    module.exports = {
+        creatFile,
+    }
 }
